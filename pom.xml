@@ -47,6 +47,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- spring cloud alibaba 依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- SpringBoot 依赖配置 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -101,13 +110,15 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <!-- bootstrap 启动器 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
+    <modules>
+        <module>tmpl-service</module>
+        <module>tmpl-dto</module>
+        <module>tmpl-dao</module>
+        <module>tmpl-util</module>
+        <module>tmpl-common</module>
+    </modules>
 
+    <dependencies>
         <!-- mybatisplus -->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -150,13 +161,6 @@
 
     </dependencies>
 
-    <modules>
-        <module>tmpl-service</module>
-        <module>tmpl-dto</module>
-        <module>tmpl-dao</module>
-        <module>tmpl-util</module>
-        <module>tmpl-common</module>
-    </modules>
 
     <build>
         <plugins>
@@ -187,30 +191,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <repositories>
-        <repository>
-            <id>public</id>
-            <name>aliyun nexus</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>public</id>
-            <name>aliyun nexus</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
 </project>

@@ -1,4 +1,4 @@
-package com.pf.tmpl.config;
+package com.pf.tmpl.config.web;
 
 import com.pf.tmpl.auth.JwtAuthenticationTokenFilter;
 import com.pf.tmpl.auth.UserDetailServerImpl;

@@ -1,4 +1,4 @@
-package com.pf.tmpl.config;
+package com.pf.tmpl.config.redis;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;

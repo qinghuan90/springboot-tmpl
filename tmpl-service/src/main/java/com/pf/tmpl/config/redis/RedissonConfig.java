@@ -1,4 +1,4 @@
-package com.pf.tmpl.config;
+package com.pf.tmpl.config.redis;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

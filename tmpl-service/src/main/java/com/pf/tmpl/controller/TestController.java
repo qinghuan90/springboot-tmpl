@@ -1,7 +1,7 @@
 package com.pf.tmpl.controller;
 
 import com.pf.common.bean.CommonResult;
-import com.pf.tmpl.feign.VmTpi;
+import com.pf.tmpl.feign.IRemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("api")
-public class OpenController {
+public class TestController {
 
     @Autowired
-    VmTpi vmTpi;
+    IRemoteService remoteService;
 
-    @GetMapping("test")
-    public CommonResult testRedis() {
-        return CommonResult.success(vmTpi.getName());
+    @GetMapping("/fn")
+    public CommonResult fn() {
+        return CommonResult.success(remoteService.name());
+    }
+
+    @GetMapping("/ff")
+    public CommonResult ff() {
+        return CommonResult.success("123456");
     }
 }

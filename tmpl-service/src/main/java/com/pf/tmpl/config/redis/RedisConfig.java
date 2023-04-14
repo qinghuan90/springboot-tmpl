@@ -1,6 +1,5 @@
-package com.pf.tmpl.config;
+package com.pf.tmpl.config.redis;
 
-import com.pf.tmpl.config.FastJsonRedisSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
