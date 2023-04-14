@@ -19,4 +19,4 @@ springboot 2.7.3
 4.  集成redis
 5.  集成自定义权限控制
 6.  redisson集成
-7.  restTemplate 设置
+7.  openfeign 设置
