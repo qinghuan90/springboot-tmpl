@@ -1,13 +1,10 @@
 package com.pf.tmpl.auth;
 
 
-import com.pf.tmpl.dto.UserInfo;
-import com.pf.tmpl.service.UserInfoService;
 import com.pf.tmpl.util.HttpResponseRender;
 import com.pf.tmpl.util.JwtUtil;
 import com.pf.tmpl.constant.Constant;
 import io.jsonwebtoken.Claims;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
