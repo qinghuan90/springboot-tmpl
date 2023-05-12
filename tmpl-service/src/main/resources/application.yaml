@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
@@ -42,4 +42,3 @@ logging:
   level:
     com.pf.tmpl.feign: debug
     com.pf.tmpl.mapper: debug  # sql日志打印只打印输入输出
-

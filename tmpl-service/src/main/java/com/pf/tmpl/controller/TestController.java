@@ -1,6 +1,9 @@
 package com.pf.tmpl.controller;
 
+import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.pf.common.bean.CommonResult;
+import com.pf.common.utils.AssertUtil;
 import com.pf.tmpl.feign.IRemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +29,9 @@ public class TestController {
     }
 
     @GetMapping("/ff")
+    @SentinelResource
     public CommonResult ff() {
-        return CommonResult.success("123456");
+        AssertUtil.strNotBlank("","NO_PARAM");
+        return CommonResult.success();
     }
 }
